@@ -1,0 +1,41 @@
+<h1>B as in Burger</h1>
+
+<h2>Add your burger</h2>
+<div class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="burgerName" name="name">
+  </div>
+  <button id="burgerButton" type="submit">Add Burger</button>
+  </div>
+
+
+
+
+<div id="burgersLeft">
+<h2>Burgers Awaiting</h2>
+{{#each result}}
+{{#unless devoured}}
+<li>
+{{ burger_name}} <img class="burgerPic" src="/assets/img/burger.png"> <button data-id="{{id}}" class="devouredButton" type="submit">Devour .this!</button>
+</li>
+{{/unless}}
+{{/each}}
+
+</div>
+
+
+
+
+<div id="burgersRight">
+<h2>Burgers eaten</h2>
+{{#each result}}
+{{#if devoured}}
+<li>
+{{ burger_name}} <img class="burgerPic" src="/assets/img/burger.png"> 
+</li>
+{{/if}}
+{{/each}}
+
+</div>
